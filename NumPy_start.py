@@ -1,10 +1,11 @@
 import numpy as np
 '''
+#----------陣列概念-----------
 #建立簡單陣列
 ndarr=np.array([3,4,-5])
 print(ndarr)
 print(ndarr.size)
-
+#----------多維建立基礎-----------
 #一維陣列
 data=np.array([3,2,6,4])
 print(data)
@@ -53,7 +54,7 @@ data=np.array([
 print(data)
 data=np.ones([2,1,1,2])
 print(data)
-
+#----------多維陣列基礎運算-----------
 #矩陣運算
 #逐元運算(elementwise)
 data1=np.array([3,2,10])
@@ -108,7 +109,7 @@ print(result)
 result=data.cumsum() #針對欄位總和column(針對第一個相度做逐數累加)
 print(result)
 '''
-#多維陣列維度/形狀操作
+#----------多維陣列維度/形狀操作-----------
 #觀察資料形狀
 '''
 data=np.ones(10)
@@ -127,7 +128,7 @@ data=np.array([
 print(data.shape)
 print(data.T)
 print(data.T.shape)
-'''
+
 #扁平化資料
 data=np.array([
     [
@@ -152,3 +153,50 @@ print(data)
 data=np.arange(9).reshape(3,3)
 print(data)
 print(data.T)
+'''
+#----------多維陣列索引、切片-----------
+#單維度的資料
+data=np.array([1,5,2,10])
+print(data[1])
+#多維度的資料
+data=np.array([
+    [0,1],
+    [10,-5],
+    [2,6]
+])
+print(data[0,1])
+print(data[1,0])
+print(data[2,0])
+#多維陣列的切片slicing
+#單維度的切片
+data=np.array([-1,-5,2,3])
+print(data[0:3])
+print(data[:2])
+print(data[2:])
+print(data[:])
+#多維度的切片
+data=np.array([
+    [0,1,2],[3,4,5],
+    [5,4,3],[2,1,0]
+])
+print(data[1:3,0:2])
+print(data[0:2,1])
+#使用...代表我全都要
+data=np.array([
+    [
+        [8,1,3],
+        [-5,5,2]
+    ],
+    [
+        [0,1,6],
+        [4,4,-3]
+    ]
+])
+print(data[0,...])
+print(data[...,1:3])
+
+#----------多維陣列合併操作-----------
+
+
+#----------多維陣列切割操作-----------
+
