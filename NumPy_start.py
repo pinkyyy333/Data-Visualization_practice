@@ -1,5 +1,5 @@
 import numpy as np
-'''
+
 #----------陣列概念-----------
 #建立簡單陣列
 ndarr=np.array([3,4,-5])
@@ -108,10 +108,10 @@ result=data.mean(axis=1)
 print(result)
 result=data.cumsum() #針對欄位總和column(針對第一個相度做逐數累加)
 print(result)
-'''
+
 #----------多維陣列維度/形狀操作-----------
 #觀察資料形狀
-'''
+
 data=np.ones(10)
 print(data)
 print(data.shape)
@@ -153,7 +153,7 @@ print(data)
 data=np.arange(9).reshape(3,3)
 print(data)
 print(data.T)
-'''
+
 #----------多維陣列索引、切片-----------
 #單維度的資料
 data=np.array([1,5,2,10])
@@ -196,7 +196,33 @@ print(data[0,...])
 print(data[...,1:3])
 
 #----------多維陣列合併操作-----------
-
+arr1=np.array([
+    [1,2,3],
+    [3,4,5]
+])
+arr2=np.array([
+    [7,8,9],
+    [10,11,12]
+])
+arr3=np.array([
+    [13,14],
+    [15,16]
+])
+result1=np.vstack((arr1,arr2))
+print(result1)
+result2=np.hstack((arr1,arr2))
+print(result2)
+result3=np.hstack((arr1,arr2,arr3))
+print(result3)
 
 #----------多維陣列切割操作-----------
-
+arr=np.array([
+    [2,4,6,8,10,12],
+    [1,3,5,7,9,11]
+])
+result1=np.vsplit(arr,2)
+print(result1)
+result2=np.hsplit(arr,2)
+print(result2)
+result3=np.hsplit(arr,3)
+print(result3)
