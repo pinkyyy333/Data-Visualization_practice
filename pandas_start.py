@@ -1,5 +1,5 @@
 import pandas as pd
-'''
+
 #----------基礎表格建立-----------
 data=pd.Series([20,10,15])
 print(data)
@@ -17,9 +17,9 @@ data=pd.DataFrame({
 print(data)
 print(data["name"])
 print(data.iloc[0])
-'''
+
 #----------Series單維度資料-----------
-'''
+
 data1=pd.Series([5,4,-2,3,7])
 #print(data)
 data=pd.Series([5,4,-2,3,7],index=["a","b","c","d","e"])
@@ -48,9 +48,9 @@ print(data.str.len()) #算出每個字串長度
 print(data.str.cat(sep="-")) #把字串串起來，可以自訂串接的符號
 print(data.str.contains("P")) #判斷每個字串是否包含特定字元
 print(data.str.replace("您好","Hello"))
-'''
+
 #----------DataFrame雙維度資料-----------
-'''
+
 data=pd.DataFrame({
     "name":["Amy","Bob","Charles"],
     "salary":[30000,50000,40000]
@@ -79,9 +79,9 @@ data["revenue"]=[500000,400000,300000]
 data["rank"]=pd.Series([3,6,1],index=["a","b","c"])
 data["cp"]=data["revenue"]/data["salary"]
 print(data)
-'''
+
 #----------篩選資料-----------
-'''
+
 #篩選練習 Serial
 data=pd.Series([30,15,20])
 condition=[True,False,True]
@@ -100,7 +100,7 @@ condition=data.str.contains("P")
 print(condition)
 filteredData=data[condition]
 print(filteredData)
-'''
+
 #篩選練習 DataFrame
 data=pd.DataFrame({
     "name":["Amy","Bob","Charles"],
